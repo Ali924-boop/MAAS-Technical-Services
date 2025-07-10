@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Geist, Geist_Mono } from 'next/font/google';
-import "../styles/globals.css";
 import Head from "next/head";
 import Link from "next/link";
 import { FaPhone } from "react-icons/fa6";
