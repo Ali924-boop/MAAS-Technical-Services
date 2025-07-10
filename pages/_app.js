@@ -3,6 +3,14 @@ import Navbar from "../components/Navbar";
 import "../styles/globals.css";
 import Head from "next/head";
 
+
+import { Geist } from 'next/font/google';
+
+const geist = Geist({
+  subsets: ['latin'],
+  preload: true,
+});
+
 function MyApp({ Component, pageProps }) {
   return (
     <>

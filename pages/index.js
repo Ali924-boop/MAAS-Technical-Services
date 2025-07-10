@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from 'next/font/google';
 import "../styles/globals.css";
 import Head from "next/head";
 import Link from "next/link";
@@ -11,15 +11,16 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { LuMails } from "react-icons/lu";
 import { motion } from "framer-motion";
 
-
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const geist = Geist({
+  subsets: ['latin'], // <-- add this line
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+  subsets: ['latin'], // <-- add this line
+  preload: true,
 });
+
 
 const services = [
   { title: "Ac Maintenance", slug: "acmaintenance", img: "/services/acduct.jpg" },

@@ -46,15 +46,25 @@ export default function Footer() {
           <div className="w-full sm:w-1/2 md:w-1/4 px-4 mb-8 md:mb-0">
             <h2 className="title-font font-medium text-black tracking-widest text-sm mb-3">QUICK LINKS</h2>
             <nav className="list-none space-y-2">
-              {["HOME", "ABOUT US", "Plumbing", "Painting", "AC Cleaning", "AC Installation", "Electrical"].map((item) => (
-                <li key={item}>
-                  <Link href={"/"} className="text-gray-600 hover:text-gray-800">{item}</Link>
+              {[
+                { label: "HOME", href: "/" },
+                { label: "ABOUT US", href: "/about" },
+                { label: "Plumbing", href: "/plumbing" },
+                { label: "Painting", href: "/painting" },
+                { label: "AC Maintenance", href: "/acmaintenance" },
+                { label: "AC Installation", href: "/acinstallation" },
+                { label: "Electrical", href: "/electrical" },
+              ].map((item) => (
+                <li key={item.label}>
+                  <Link href={item.href} className="text-gray-600 hover:text-gray-800">
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </nav>
           </div>
 
-          {/* Payment Methods */}
+
           {/* PAYMENT METHODS + SOCIAL MEDIA CONTACTS in one column */}
           <div className="w-full sm:w-1/2 md:w-1/4 px-4">
             {/* PAYMENT METHODS */}
