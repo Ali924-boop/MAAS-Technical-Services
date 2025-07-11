@@ -140,7 +140,7 @@ export default function Home() {
           </div>
 
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-full px-4 sm:px-0">
-            <img className="object-cover object-center rounded" alt="hero" src="hero.jpg" />
+            <img className="object-cover object-center rounded" alt="hero" src="/hero.jpg" />
           </div>
         </div>
       </motion.section>
