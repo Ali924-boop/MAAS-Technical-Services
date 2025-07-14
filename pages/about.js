@@ -61,6 +61,14 @@ const About = () => {
               <li>AC Duct and Coil Cleaning</li>
               <li>Electrical Work</li>
               <li>Plumbing Services</li>
+              <li>Tile Work</li>
+              <li>Handyman</li>
+              <li>Office Cleaning</li>
+              <li>Window Cleaning</li>
+              <li>Home Cleaning</li>
+              <li>Deep Cleaning</li>
+              <li>Swiming Pool Cleaning</li>
+              <li>General Cleaning</li>
               <li>Painting and Renovation</li>
             </ul>
 

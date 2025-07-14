@@ -2,6 +2,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "../styles/globals.css";
 import Head from "next/head";
+import CustomerChat from '../components/CustomerChat';
 
 
 import { Geist } from 'next/font/google';
@@ -45,7 +46,7 @@ function MyApp({ Component, pageProps }) {
 </Head>
       <Navbar />
       <Component {...pageProps} />
-      <Footer />
+      <Footer /><CustomerChat />
     </>
   );
 }

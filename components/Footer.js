@@ -2,14 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaGooglePay, FaCcPaypal, FaCcVisa, FaCcMastercard } from "react-icons/fa";
 import { IoLogoFacebook } from "react-icons/io5";
-import { TiSocialLinkedinCircular } from "react-icons/ti";
+import { FaInstagram } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io";
 
 
 export default function Footer() {
   return (
     <footer className="text-gray-600 body-font bg-white shadow-[0_-4px_10px_rgba(0,0,0,0.1)]">
-      <div className="container px-5 py-24 mx-auto flex flex-wrap md:flex-nowrap">
+      <div className="container px-5 py-20 mx-auto flex flex-wrap md:flex-nowrap">
         {/* Logo & Description */}
         <div className="w-64 flex-shrink-0 mx-auto text-center md:text-left md:mx-0 mb-10 md:mb-0">
           <Link href={"/"} className="flex justify-center md:justify-start">
@@ -25,10 +25,10 @@ export default function Footer() {
           {/* Our Services */}
           <div className="w-full sm:w-1/2 md:w-1/4 px-4 mb-8 md:mb-0">
             <h2 className="title-font font-medium text-black tracking-widest text-sm mb-3">OUR SERVICES</h2>
-            <nav className="list-none space-y-2">
-              {["AC Maintenance", "AC Duct Cleaning", "AC Installation", "House Cleaning", "Electrical", "Plumbing", "Painting"].map((item) => (
+            <nav className="list-none space-y-2 ">
+              {[ "AC Installation","Swiming Pool Cleaning", "Office Clening", "House Cleaning", "Deep Cleaning", "Window Cleaning", "Handyman"].map((item) => (
                 <li key={item}>
-                  <Link href={"/"} className="text-gray-600 hover:text-blue-800">{item}</Link>
+                  <Link href={"/"} className="text-gray-600 hover:font-semibold hover:text-blue-800">{item}</Link>
                 </li>
               ))}
             </nav>
@@ -56,7 +56,7 @@ export default function Footer() {
                 { label: "Electrical", href: "/electrical" },
               ].map((item) => (
                 <li key={item.label}>
-                  <Link href={item.href} className="text-gray-600 hover:text-gray-800">
+                  <Link href={item.href} className="text-gray-600 hover:font-semibold hover:text-blue-800">
                     {item.label}
                   </Link>
                 </li>
@@ -72,18 +72,18 @@ export default function Footer() {
               PAYMENT METHODS
             </h2>
             <div className="flex justify-center md:justify-start space-x-6 mt-4 mb-6">
-              <Link href={"/"} aria-label="Google Pay" className="text-5xl hover:text-blue-700">
+              <span href={"/"} aria-label="Google Pay" className="text-4xl ">
                 <FaGooglePay />
-              </Link>
-              <Link href={"/"} aria-label="Paypal" className="text-4xl hover:text-blue-700">
+              </span>
+              <span href={"/"} aria-label="Paypal" className="text-4xl ">
                 <FaCcPaypal />
-              </Link>
-              <Link href={"/"} aria-label="Visa" className="text-4xl hover:text-blue-700">
+              </span>
+              <span href={"/"} aria-label="Visa" className="text-4xl ">
                 <FaCcVisa />
-              </Link>
-              <Link href={"/"} aria-label="Mastercard" className="text-4xl hover:text-blue-700">
+              </span>
+              <span href={"/"} aria-label="Mastercard" className="text-4xl ">
                 <FaCcMastercard />
-              </Link>
+              </span>
             </div>
 
             {/* SOCIAL MEDIA CONTACTS */}
@@ -91,15 +91,15 @@ export default function Footer() {
               SOCIAL MEDIA CONTACTS
             </h2>
             <div className="flex justify-center md:justify-start space-x-6 mt-4">
-              <Link href="https://www.facebook.com/YourFacebookUsername"
+              <Link href="https://www.facebook.com/"
                 target="_blank" aria-label="Facebook" className="text-4xl hover:text-blue-700">
                 <IoLogoFacebook />
               </Link>
-              <Link href="https://www.linkedin.com/in/YourLinkedInUsername"
+              <Link href="https://www.instagram.com/maastechnicalcleaningservices/"
                 target="_blank" aria-label="LinkedIn" className="text-4xl hover:text-blue-700">
-                <TiSocialLinkedinCircular />
+                <FaInstagram />
               </Link>
-              <Link href="https://wa.me/9723121234" // Add your full WhatsApp number without +
+              <Link href="https://wa.me/+971547615720" // Add your full WhatsApp number without +
                 target="_blank" aria-label="WhatsApp" className="text-4xl hover:text-blue-700">
                 <IoLogoWhatsapp />
               </Link>
@@ -113,18 +113,11 @@ export default function Footer() {
       <div className="bg-blue-800">
         <div className="container mx-auto py-4 px-5 flex flex-col sm:flex-row items-center justify-center sm:justify-between text-sm text-white">
           <p className="text-center sm:text-left">
-            © Copyright 2022 Maas Technical Services Dubai. All rights reserved.
-
-            <Link
-              href="https://twitter.com/knyttneve"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white ml-4 hover:text-blue-700"
-            >
-              @Ceo & Founder
-            </Link>
+            © 2022–2025 Maas Technical Cleaning Services. Website developed in 2025.
+            <span className="ml-2 text-xs block sm:inline text-gray-300">
+              Developed by Ali Raza
+            </span>
           </p>
-
         </div>
       </div>
     </footer>

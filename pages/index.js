@@ -3,9 +3,8 @@ import Image from "next/image";
 import { Geist, Geist_Mono } from 'next/font/google';
 import Head from "next/head";
 import Link from "next/link";
-import { FaPhone } from "react-icons/fa6";
+import { FaPhone, FaInstagram } from "react-icons/fa6";
 import { IoLocationSharp, IoLogoFacebook } from "react-icons/io5";
-import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { LuMails } from "react-icons/lu";
 import { motion } from "framer-motion";
@@ -20,6 +19,11 @@ const geistMono = Geist_Mono({
   preload: true,
 });
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
+};
+
 
 const services = [
   { title: "Ac Maintenance", slug: "acmaintenance", img: "/services/acduct.jpg" },
@@ -33,6 +37,13 @@ const services = [
   { title: "Water Tank Cleaning", slug: "watertankcleaning", img: "/services/tankclean.jpg" },
   { title: "Carpet Cleaning", slug: "carpetcleaning", img: "/services/carpetclean.jpg" },
   { title: "Handyman", slug: "handyman", img: "/services/handyman.jpg" }, // <-- fixed slug & img
+  { title: "Home Cleaning", slug: "homecleaning", img: "/services/homeclean.jpg" }, // <-- fixed slug & img
+  { title: "Deep Cleaning", slug: "deepcleaning", img: "/services/deepclean.jpg" }, // <-- fixed slug & img
+  { title: "General Cleaning", slug: "generalcleaning", img: "/services/generalclean.jpg" }, // <-- fixed slug & img
+  { title: "Tile Work", slug: "tilework", img: "/services/tileswork.jpg" }, // <-- fixed slug & img
+  { title: "Office Cleaning", slug: "officecleaning", img: "/services/officeclean.jpg" }, // <-- fixed slug & img
+  { title: "Window Cleaning", slug: "windowcleaning", img: "/services/windowclean.jpg" }, // <-- fixed slug & img
+  { title: "Swiming-Pool Cleaning", slug: "swimingpoolcleaning", img: "/services/poolclean.jpg" }, // <-- fixed slug & img
 ];
 
 
@@ -59,7 +70,7 @@ export default function Home() {
         <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row items-center justify-center text-white text-xs sm:text-sm gap-3 sm:gap-14">
           <Link href={"tel:+923014707953"} className="flex items-center gap-2">
             <FaPhone />
-            <p>+923014707953</p>
+            <p>+971547615720</p>
           </Link>
           <div className="hidden md:block h-6 w-[1px] bg-white"></div>
           <Link
@@ -68,11 +79,11 @@ export default function Home() {
             className="flex items-center gap-2"
           >
             <LuMails />
-            <p>maasservices@gmail.com</p>
+            <p>maastechnicalcleaningservices@gmail.com</p>
           </Link>
           <div className="hidden md:block h-6 w-[1px] bg-white"></div>
           <Link
-            href="https://www.google.com/maps/place/Dubai,+UAE"
+            href={"https://www.google.com/maps/place/Al+Ansari+Exchange,+Murar+Branch/@25.2786267,55.3084759,17z/data=!3m1!4b1!4m6!3m5!1s0x3e5f434d87b88225:0xb7e3b16b59a59083!8m2!3d25.2786219!4d55.3110508!16s%2Fg%2F1pp2tjlrh?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D"}
             target="_blank"
             className="flex items-center gap-2"
           >
@@ -81,13 +92,13 @@ export default function Home() {
           </Link>
           <div className="hidden md:block h-6 w-[1px] bg-white"></div>
           <div className="flex items-center gap-4">
-            <Link href="https://www.facebook.com/YourFacebookUsername" target="_blank" rel="noopener noreferrer">
+            <Link href="" target="_blank" rel="noopener noreferrer">
               <IoLogoFacebook className="text-xl cursor-pointer" />
             </Link>
-            <Link href="https://www.linkedin.com/in/YourLinkedInUsername" target="_blank" rel="noopener noreferrer">
-              <TiSocialLinkedinCircular className="text-2xl cursor-pointer" />
+            <Link href="https://www.instagram.com/maastechnicalcleaningservices/" target="_blank" rel="">
+              <FaInstagram className="text-2xl cursor-pointer" />
             </Link>
-            <Link href="https://wa.me/923014707953" target="_blank" rel="noopener noreferrer">
+            <Link href="https://wa.me/+971547615720" target="_blank" rel="noopener noreferrer">
               <IoLogoWhatsapp className="text-2xl cursor-pointer text-green-500" />
             </Link>
           </div>
@@ -118,24 +129,25 @@ export default function Home() {
             <p className="mb-8 leading-relaxed ">
               Maas Technical Cleaning Services As a proficient company operating in Dubai, Dedicated Technical Services always strives to meet the demands of its clients with skill and capability.
             </p>
-            <div className="flex justify-center">
-              <div className="relative max-w-md mx-auto lg:mx-0">
-                <input
-                  type="text"
-                  inputMode="numeric"
-                  pattern="[0-9]*"
-                  placeholder="Input Your Number"
-                  onInput={(e) => (e.target.value = e.target.value.replace(/[^0-9]/g, ""))}
-                  className="w-full pr-36 bg-gray-100 bg-opacity-50 rounded-full border border-gray-300 focus:border-blue-900 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base text-gray-700 py-3 px-4 transition duration-200"
-                />
+            <div className="flex justify-center mt-6 gap-4 flex-wrap">
+              <Link
+                href="tel:+9723121234"
+                className="w-48 sm:w-56 inline-flex justify-center items-center gap-2 bg-blue-800 hover:bg-blue-600 text-white text-sm font-semibold px-5 py-3 rounded-full shadow-lg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                aria-label="Call to Help"
+              >
+                <FaPhone className="text-lg" />
+                Call to Help!
+              </Link>
 
-                <button className="absolute top-1/2 right-2 -translate-y-1/2 bg-blue-800 text-white text-sm px-4 py-2 rounded-full hover:bg-blue-600">
-                  <Link href={"tel:+9723121234"} className="flex items-center gap-2">
-                    <FaPhone />
-                    Call to Help!
-                  </Link>
-                </button>
-              </div>
+              <Link
+                href="https://wa.me/+971547615720"
+                className="w-48 sm:w-56 inline-flex justify-center items-center gap-2 bg-green-600 hover:bg-green-500 text-white text-sm font-semibold px-5 py-3 rounded-full shadow-lg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-green-400"
+                aria-label="Chat on WhatsApp"
+                target="_blank"
+              >
+                <IoLogoWhatsapp className="text-lg" />
+                Chat on WhatsApp
+              </Link>
             </div>
           </div>
 
@@ -144,6 +156,67 @@ export default function Home() {
           </div>
         </div>
       </motion.section>
+       {/* Content Section */}
+            <motion.section
+              className="text-gray-600 body-font"
+              initial="hidden"
+              animate="visible"
+              variants={fadeInUp}
+              transition={{ delay: 0.5 }}
+            >
+              <div className="container mx-auto flex flex-col md:flex-row items-center px-5 py-24">
+                {/* Text content */}
+                <div className="md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                  <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">About Us</h1>
+                  <p className="mb-8 leading-relaxed">
+                    Welcome to Maas Technical Services, your trusted partner for home and office maintenance in Dubai.
+                    We understand that keeping your space clean, safe, and well-maintained is important for your comfort and peace of mind. That’s why we’re here to make it easy for you. Whether it’s a small repair or a full service job, we believe “One call can solve all your house problems.”
+                  </p>
+      
+                  <h3 className="title-font sm:text-2xl text-3xl mb-4 font-medium text-gray-900">What We Do</h3>
+                  <p className="mb-5 leading-relaxed">Maas Technical provides a wide range of reliable and affordable services, including :</p>
+      
+                  <ul className="list-disc list-inside space-y-1 mb-5 text-left md:text-left">
+                    <li>AC Maintenance and Installation</li>
+                    <li>AC Duct and Coil Cleaning</li>
+                    <li>Electrical Work</li>
+                    <li>Plumbing Services</li>
+                    <li>Tile Work</li>
+                    <li>Handyman</li>
+                    <li>Office Cleaning</li>
+                    <li>Window Cleaning</li>
+                    <li>Home Cleaning</li>
+                    <li>Deep Cleaning</li>
+                    <li>Swiming Pool Cleaning</li>
+                    <li>General Cleaning</li>
+                    <li>Painting and Renovation</li>
+                  </ul>
+      
+                  <p className="leading-relaxed">
+                    We use professional tools, modern techniques, and high-quality materials to deliver long-lasting results. Whether it's a minor fault or a major project, we handle everything with care.
+                  </p>
+      
+                  <h3 className="title-font sm:text-2xl text-3xl mt-8 mb-2 font-medium text-gray-900">Our Goal</h3>
+                  <p className="leading-relaxed">
+                    Our goal is to become the most trusted maintenance and cleaning service in Dubai by providing honest, timely, and quality work. We aim to build long-term relationships with our customers through trust, value, and excellent service.
+                  </p>
+                </div>
+      
+                {/* Image */}
+                <motion.div
+                  className="md:w-1/2 w-5/6 lg:max-w-lg"
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.7, delay: 0.7 }}
+                >
+                  <img
+                    className="object-cover object-center rounded shadow-lg"
+                    alt="About Maas Technical Services"
+                    src="/abouthero.jpg"
+                  />
+                </motion.div>
+              </div>
+            </motion.section>
 
       {/* Discount Section */}
       <motion.section
@@ -293,22 +366,32 @@ export default function Home() {
                 Have questions or need assistance with our services? Reach out to us today. Browse our offerings below and click “Request Call Back” to speak with our team directly. We're here to help with all your technical and cleaning needs.
               </p>
             </div>
-            <div className="relative max-w-md mx-auto lg:mx-0">
-              <input
-                type="text"
-                inputMode="numeric"
-                pattern="[0-9]*"
-                placeholder="Input Your Number"
-                onInput={(e) => (e.target.value = e.target.value.replace(/[^0-9]/g, ""))}
-                className="w-full pr-36 bg-gray-100 bg-opacity-50 rounded-full border border-gray-300 focus:border-blue-900 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base text-gray-700 py-3 px-4 transition duration-200"
-              />
+            <div className="flex justify-center mt-6 gap-4 flex-wrap">
+              <Link
+                href="tel:+9723121234"
+                className="w-48 sm:w-56 inline-flex justify-center items-center gap-2 bg-blue-800 hover:bg-blue-600 text-white text-sm font-semibold px-5 py-3 rounded-full shadow-lg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                aria-label="Call to Help"
+              >
+                <FaPhone className="text-lg" />
+                Call to Help!
+              </Link>
 
-              <button className="absolute top-1/2 right-2 -translate-y-1/2 bg-blue-800 text-white text-sm px-4 py-2 rounded-full hover:bg-blue-600">
-                <Link href={"tel:+9723121234"} className="flex items-center gap-2">
-                  <FaPhone />
-                  Call to Help!
-                </Link>
-              </button>
+              <Link
+                href="https://wa.me/923014707953"
+                className="w-48 sm:w-56 inline-flex justify-center items-center gap-2 bg-green-600 hover:bg-green-500 text-white text-sm font-semibold px-5 py-3 rounded-full shadow-lg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-green-400"
+                aria-label="Chat on WhatsApp"
+                target="_blank"
+              >
+                <IoLogoWhatsapp className="text-lg" />
+                Chat on WhatsApp
+              </Link>
+            </div>
+            <div className="text-center max-w-2xl mx-auto px-4 py-24">
+              <h1 className="text-2xl font-bold text-gray-800 mb-2">Our Address</h1>
+              <Link href={"https://www.google.com/maps/place/Al+Ansari+Exchange,+Murar+Branch/@25.2786267,55.3084759,17z/data=!3m1!4b1!4m6!3m5!1s0x3e5f434d87b88225:0xb7e3b16b59a59083!8m2!3d25.2786219!4d55.3110508!16s%2Fg%2F1pp2tjlrh?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D"}><p className="text-gray-600 text-sm font-semibold">
+                Al ansari exchange same building. Omar Bin Alkhattab St, near Murar Jadeed Bus Station Murar,Deira - Dubai - United Arab Emirates. 
+              </p>
+              </Link>
             </div>
           </motion.div>
 
@@ -328,6 +411,7 @@ export default function Home() {
                 const formData = new FormData(e.target);
                 const data = {
                   name: formData.get("name"),
+                  email: formData.get("email"),
                   phone: formData.get("phone"),
                   service: formData.get("service"),
                   message: formData.get("message"),
@@ -356,6 +440,13 @@ export default function Home() {
                 type="text"
                 name="name"
                 placeholder="Enter your name"
+                required
+                className="w-11/12 max-w-md mx-auto block rounded-full border border-black bg-white focus:border-blue-600 focus:ring-2 focus:ring-blue-200 text-base text-gray-700 py-2 px-4 transition duration-200"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
                 required
                 className="w-11/12 max-w-md mx-auto block rounded-full border border-black bg-white focus:border-blue-600 focus:ring-2 focus:ring-blue-200 text-base text-gray-700 py-2 px-4 transition duration-200"
               />
