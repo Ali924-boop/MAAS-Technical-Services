@@ -249,7 +249,7 @@ const Navbar = () => {
               )}
             </li>
 
-            {/* Admin Buttons Mobile */}
+            {/* Admin Buttons Mobiles devices */}
             {isAdmin ? (
               <>
                 <li>
