@@ -115,7 +115,7 @@ export default function Footer() {
           <p className="text-center sm:text-left">
             © 2022–2025 Maas Technical Cleaning Services. Website developed in 2025.
             <span className="ml-2 text-xs block sm:inline text-gray-300">
-              Developed by Ali Raza
+              <Link href="https://www.upwork.com/freelancers/~01ca571567edf3fd95" className="text-white hover:text-green-400">Developed by Ali Raza</Link>
             </span>
           </p>
         </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Geist } from 'next/font/google';
 import Head from "next/head";
 import Link from "next/link";
 import { FaPhone, FaInstagram } from "react-icons/fa6";
@@ -9,15 +9,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { LuMails } from "react-icons/lu";
 import { motion } from "framer-motion";
 
-const geist = Geist({
-  subsets: ['latin'], // <-- add this line
-  preload: true,
-});
-
-const geistMono = Geist_Mono({
-  subsets: ['latin'], // <-- add this line
-  preload: true,
-});
+const geist = Geist({ subsets: ['latin'], preload: true });
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
