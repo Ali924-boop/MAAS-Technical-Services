@@ -25,7 +25,7 @@ const services = [
   { title: "Plumbing", slug: "plumbing", img: "/services/plumbing.jpg" },
   { title: "Sofa Cleaning", slug: "sofaclean", img: "/services/sofaclean.jpg" },
   { title: "Painting", slug: "painting", img: "/services/paintwork.jpg" },
-  { title: "Wallpaper Fixing", slug: "wallpaperfixing", img: "/services/Walpaperfixing.jpg" },
+  { title: "Wallpaper Fixing", slug: "walpaperfixing", img: "/services/Walpaperfixing.jpg" },
   { title: "Water Tank Cleaning", slug: "watertankcleaning", img: "/services/tankclean.jpg" },
   { title: "Carpet Cleaning", slug: "carpetcleaning", img: "/services/carpetclean.jpg" },
   { title: "Handyman", slug: "handyman", img: "/services/handyman.jpg" }, // <-- fixed slug & img
@@ -53,7 +53,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Maas Technical Cleaning Services</title>
-        <meta name="description" content="Maas_Technical_Cleaning Services.com" />
+        <meta name="description" content="Maas_Technical_Cleaning Services.com Maas technical cleaning" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -473,8 +473,8 @@ export default function Home() {
                 <option value="Plumbing">Plumbing</option>
                 <option value="Sofa Cleaning">Sofa Cleaning</option>
                 <option value="Painting">Painting</option>
-                <option value="Wallpaper Fixing">Wallpaper Fixing</option>
-                <option value="Handyman">Handyman</option>  {/* Added Handyman option */}
+                <option value="walpaperfixing">Wallpaper Fixing</option>
+                <option value="Handyman">Handyman</option>
               </select>
 
               <textarea

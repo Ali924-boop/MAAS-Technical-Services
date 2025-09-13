@@ -48,12 +48,26 @@ const Walpaperfixing = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h2 className="text-sm title-font text-gray-500 tracking-widest">MAAS</h2>
+          <h2 className="text-sm title-font text-gray-500 tracking-widest">
+            MAAS
+          </h2>
           <h1 className="text-gray-900 text-3xl title-font font-medium mb-4">
             Get The Best Wallpaper Fixing Services In Dubai
           </h1>
           <p className="leading-relaxed mb-6">
-            Elevate any room with our expert wallpaper fixing service. Whether you choose vinyl, grasscloth, or peel-and-stick designs, our technicians ensure perfect pattern alignment and seamless edge matching. We begin by preparing walls—removing old paper, filling imperfections, and applying high-quality primers. Each strip is measured, cut, and carefully hung, smoothing out air bubbles and excess adhesive for a pristine finish. For textured or delicate materials, we employ specialized techniques to preserve integrity and prevent damage. Our service includes removal of outdated wallpaper and disposal, making transitions effortless. With meticulous attention to detail and professional tools, Maas Technical delivers stunning, durable wallpaper installations that transform spaces with style.
+            Elevate any room with our expert wallpaper fixing service. Whether
+            you choose vinyl, grasscloth, or peel-and-stick designs, our
+            technicians ensure perfect pattern alignment and seamless edge
+            matching. We begin by preparing walls—removing old paper, filling
+            imperfections, and applying high-quality primers. Each strip is
+            measured, cut, and carefully hung, smoothing out air bubbles and
+            excess adhesive for a pristine finish. For textured or delicate
+            materials, we employ specialized techniques to preserve integrity
+            and prevent damage. Our service includes removal of outdated
+            wallpaper and disposal, making transitions effortless. With
+            meticulous attention to detail and professional tools, Maas
+            Technical delivers stunning, durable wallpaper installations that
+            transform spaces with style.
           </p>
           <div className="relative max-w-md mx-auto lg:mx-0">
             <input
@@ -61,11 +75,16 @@ const Walpaperfixing = () => {
               inputMode="numeric"
               pattern="[0-9]*"
               placeholder="Input Your Number"
-              onInput={(e) => (e.target.value = e.target.value.replace(/[^0-9]/g, ""))}
+              onInput={(e) =>
+                (e.target.value = e.target.value.replace(/[^0-9]/g, ""))
+              }
               className="w-full pr-36 bg-gray-100 bg-opacity-50 rounded-full border border-gray-300 focus:border-blue-900 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base text-gray-700 py-3 px-4 transition duration-200"
             />
             <button className="absolute top-1/2 right-2 -translate-y-1/2 bg-blue-800 text-white text-sm px-4 py-2 rounded-full hover:bg-blue-600">
-              <Link href={"tel:+9723121234"} className="flex items-center gap-2">
+              <Link
+                href={"tel:+9723121234"}
+                className="flex items-center gap-2"
+              >
                 <FaPhone />
                 Call to Help!
               </Link>
@@ -80,7 +99,9 @@ const Walpaperfixing = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="text-white text-4xl mb-8 font-bold text-center">Contact Us</h2>
+          <h2 className="text-white text-4xl mb-8 font-bold text-center">
+            Contact Us
+          </h2>
           <form
             onSubmit={async (e) => {
               e.preventDefault();
@@ -90,6 +111,7 @@ const Walpaperfixing = () => {
               const formData = new FormData(e.target);
               const data = {
                 name: formData.get("name"),
+                email: formData.get("email"),
                 phone: formData.get("phone"),
                 service: formData.get("service"),
                 message: formData.get("message"),
@@ -101,14 +123,24 @@ const Walpaperfixing = () => {
                   body: JSON.stringify(data),
                 });
                 if (res.ok) {
-                  setSubmitStatus({ success: true, message: "Detail Submit Successfully! Your message has been sent!" });
+                  setSubmitStatus({
+                    success: true,
+                    message:
+                      "Detail Submit Successfully! Your message has been sent!",
+                  });
                   e.target.reset();
                   setService("");
                 } else {
-                  setSubmitStatus({ success: false, message: "Detail Not Submit!" });
+                  setSubmitStatus({
+                    success: false,
+                    message: "Detail Not Submit!",
+                  });
                 }
               } catch {
-                setSubmitStatus({ success: false, message: "Detail Not Submit!" });
+                setSubmitStatus({
+                  success: false,
+                  message: "Detail Not Submit!",
+                });
               }
               setLoading(false);
             }}
@@ -123,13 +155,23 @@ const Walpaperfixing = () => {
             />
 
             <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+              className="w-11/12 max-w-md mx-auto block rounded-full border border-black bg-white focus:border-blue-600 focus:ring-2 focus:ring-blue-200 text-base text-gray-700 py-2 px-4 transition duration-200"
+            />
+
+            <input
               type="text"
               name="phone"
               inputMode="numeric"
               pattern="[0-9]*"
               placeholder="Enter your mobile no"
               required
-              onInput={(e) => (e.target.value = e.target.value.replace(/[^0-9]/g, ""))}
+              onInput={(e) =>
+                (e.target.value = e.target.value.replace(/[^0-9]/g, ""))
+              }
               className="w-11/12 max-w-md mx-auto block rounded-full border border-black bg-white focus:border-blue-600 focus:ring-2 focus:ring-blue-200 text-base text-gray-700 py-2 px-4 transition duration-200"
             />
 
@@ -162,14 +204,20 @@ const Walpaperfixing = () => {
               type="submit"
               disabled={loading}
               className={`text-white bg-blue-800 border-0 py-3 px-12 focus:outline-none rounded-full text-lg mx-auto block cursor-pointer
-                ${loading ? "opacity-50 cursor-not-allowed" : "hover:bg-blue-600"}`}
+                ${
+                  loading
+                    ? "opacity-50 cursor-not-allowed"
+                    : "hover:bg-blue-600"
+                }`}
             >
               {loading ? "Sending..." : "Send Message"}
             </button>
 
             {submitStatus && (
               <p
-                className={`text-center font-semibold mt-2 ${submitStatus.success ? "text-green-600" : "text-red-600"}`}
+                className={`text-center font-semibold mt-2 ${
+                  submitStatus.success ? "text-green-600" : "text-red-600"
+                }`}
               >
                 {submitStatus.message}
               </p>
